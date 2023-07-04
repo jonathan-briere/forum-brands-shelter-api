@@ -12,5 +12,11 @@ module ExceptionHandler
     rescue_from ActiveRecord::RecordInvalid do |e|
       render json: { message: e.message }, status: :unprocessable_entity
     end
+
+    rescue_from ActionController::ParameterMissing do |e|
+      missing_params = e.message.split(':').map(&:strip).drop(1).join(', ')
+      render json: { message: I18n.t('application.exceptions.missing_parameter', parameters: missing_params) },
+             status: :unprocessable_entity
+    end
   end
 end
