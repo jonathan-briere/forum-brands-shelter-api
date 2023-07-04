@@ -1,5 +1,6 @@
 class Animal < ApplicationRecord
   belongs_to :shelter
+  belongs_to :guardian, optional: true
 
   validates :name, :age, :breed, :weight, :animal_type, :joined_at, presence: true
   validates :age, numericality: { only_integer: true, greater_than: 0 }
