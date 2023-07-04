@@ -14,3 +14,9 @@ AllCops:
     - 'bin/*'
     - 'spec/**/*'
   NewCops: enable
+Style/PercentLiteralDelimiters:
+  Enabled: true
+  PreferredDelimiters:
+    default: '[]'
+    '%i': '()'
+    '%w': '()'
