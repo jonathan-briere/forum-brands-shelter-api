@@ -83,7 +83,7 @@ animals = [
    breed: Faker::Creature::Cat.breed,
    age: Faker::Number.between(from: 1, to: 30),
    weight: Faker::Number.between(from: 2, to: 900),
-   joined_at: DateTime.current,
+   joined_at: 2.days.ago,
    adopted: false
  },
  {
@@ -92,7 +92,7 @@ animals = [
    breed: Faker::Creature::Dog.breed,
    age: Faker::Number.between(from: 1, to: 30),
    weight: Faker::Number.between(from: 2, to: 900),
-   joined_at: DateTime.current,
+   joined_at: 10.days.ago,
    adopted: false
  }
 ]
