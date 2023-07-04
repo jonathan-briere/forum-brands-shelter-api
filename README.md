@@ -26,4 +26,3 @@ rails server
 ```
 bundle exec rspec
 ```
-
