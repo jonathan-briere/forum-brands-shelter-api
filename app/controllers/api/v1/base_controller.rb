@@ -18,6 +18,10 @@ module Api
         end
       end
 
+      def show
+        render json: resource
+      end
+
       def update
         if resource.update(permitted_params)
           render json: resource, each_serializer: serializer

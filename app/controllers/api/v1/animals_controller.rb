@@ -1,7 +1,7 @@
 module Api
   module V1
     class AnimalsController < BaseController
-      actions :index, :update
+      actions :index, :show, :update
 
       def adopt
         adopted_animal = ::Animals::Adopt.new(params[:id], params).execute
